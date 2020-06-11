@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
+/* #Primary
+================================================== */
+
+body {
+	font-family: 'Nunito', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #212112;
+	background-color: #fff;
+	overflow-x: hidden;
+	transition: all 200ms linear;
+}
+
+::selection {
+	color: #fff;
+	background-color: #7f00ff;
+}
+
+::-moz-selection {
+	color: #fff;
+	background-color: #7f00ff;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+img {
+	max-width: 100%;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+* {
+	list-style: none;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	margin: 0;
+}
+
+button:focus {
+	outline: none;
+}
+
+.container {
+	max-width: 1200px;
+}
+
+/* #Navigation
+================================================== */
+
+.start-header {
+	opacity: 1;
+	transform: translateY(0);
+	box-shadow:0 0 5px 0 hsla(0, 0%, 91%, 0.62);
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+	position: fixed;
+	width: 100%;
+	z-index: 70;
+	background-color: #ffffff;
+}
+
+.start-header.scroll-on {
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+/**********************header*********************/
+
+.navbar-wrapper .container {
+	padding: 0 15px;
+}
+
+.navbar-wrapper {
+	padding: 0;
+	display: block;
+}
+
+.navbar-wrapper .row {
+	width: 100%;
+}
+
+.logo-wrapper {
+	height: 60px;
+	display: flex;
+	align-items: center;
+}
+
+.navbar-link-wrapper ul li {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.navbar-link-wrapper ul li a {
+	font-size: 18px;
+	color: #111111;
+	padding: 10px 0;
+	margin: 0 15px;
+	line-height: 40px;
+	text-transform: capitalize;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	transition: all 0.6s ease-in-out;
+}
+
+.navbar-link-wrapper ul li a.active, .navbar-link-wrapper ul li a:hover {
+	color: #7f00ff;
+}
+
+.navbar-link-wrapper ul li a:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	right: 0;
+	bottom: 17px;
+	border-bottom: 2px solid #111111;
+	transition: all 0.6s ease-in-out;
+}
+
+.navbar-link-wrapper ul li a.active:after, .navbar-link-wrapper ul li a:hover:after {
+	width: 100%;
+	left: 0;
+	right: auto;
+	border-bottom: 2px solid #7f00ff;
+}
+
+.navbar-link-wrapper ul li.nav-item-login a {
+	padding: 0 20px;
+	margin-left: 15px;
+	border: 1px solid #ffffff;
+	border-radius: 100px;
+	line-height: 38px;
+	transition: all 0.6s ease-in-out;
+}
+
+.navbar-link-wrapper ul li.nav-item-login a:after {
+	display: none;
+}
+
+.navbar-link-wrapper ul li.nav-item-login:hover a, .navbar-link-wrapper ul li.nav-item-login.active a {
+	border: 1px solid #111111;
+	background-color: #111111;
+	color: #ffffff;
+	transition: all 0.6s ease-in-out;
+}
+
+.navbar-expand-lg .navbar-link-wrapper .navbar-nav {
+	display: block;
+	flex-direction: inherit;
+	width: 100%;
+	text-align: right;
+}
+
+.navbar-toggler {
+	background-color: transparent;
+	padding: 0;
+	border: none;
+}
+
+.navbartoggler-icon {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #222222;
+	font-size: 21px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.navbartoggler-icon i {
+	color: #222222;
+}
+
+@media(max-width:991px) {
+	.navbar-link-wrapper ul li a:after {
+		display: none;
+	}
+	.navbar-link-wrapper ul li {
+		display: block;
+		padding: 6px 6px;
+	}
+	.navbartoggler-icon{
+		border: none;
+	}
+	.navbar-link-wrapper ul li:last-child {
+		border: none;
+	}
+	.navbar-link-wrapper {
+		background-color: #ffffff;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+	}
+	.navbar-link-wrapper ul li a {
+		padding: 0 15px;
+		margin: 0;
+		display: block;
+		color: #111111;
+	}
+	.collapse.show {
+		display: block;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+		transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	}
+	.navbar-expand-lg .navbar-link-wrapper .navbar-nav {
+		text-align: left;
+		padding: 15px 0;
+	}
+	.navbar-link-wrapper ul li.nav-item-login a {
+		display: none;
+	}
+	.logo-menu-wrapper {
+		width: 100%;
+		display: flex;
+	}
+	.logo-box, .navbar-toggler {
+		width: 50%;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.navbar-toggler {
+		text-align: right;
+	}
+}
+
+/* #Primary style
+================================================== */
+
+.navigation-wrap {
+	background-color: #eeeeee;
+	transition: all 200ms linear;
+	border-bottom: 1px solid #eee;
+}
+
+.full-height {
+	height: 100vh;
+}
+
+.over-hide {
+	overflow: hidden;
+}
+
+.absolute-center {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	margin-top: 40px;
+	transform: translateY(-50%);
+	z-index: 20;
+}
+
+p {}
+
+.nav-item .dropdown-menu {
+	transform: translate3d(0, 10px, 0);
+	visibility: hidden;
+	opacity: 0;
+	max-height: 0;
+	display: block;
+	padding: 0;
+	margin: 0;
+	transition: all 200ms linear;
+}
+
+.nav-item.show .dropdown-menu {
+	opacity: 1;
+	visibility: visible;
+	max-height: 999px;
+	transform: translate3d(0, 0px, 0);
+}
+
+.dropdown-menu {
+	padding: 10px!important;
+	margin: 0;
+	font-size: 13px;
+	letter-spacing: 1px;
+	color: #212121;
+	background-color: #fcfaff;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+	transition: all 200ms linear;
+}
+
+.dropdown-toggle::after {
+	display: none;
+}
+
+.dropdown-item {
+	padding: 3px 15px;
+	color: #212121;
+	border-radius: 2px;
+	transition: all 200ms linear;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+	color: #fff;
+	background-color: rgba(129, 103, 169, .6);
+}
+
+/* #content
+================================================== */
+
+a {
+    color: #7f2bff;
+}
+
+a:hover {
+    color: #e026ff;
+}
+
+h2 {
+	display: block;
+	color: #7f00ff;
+	font-weight: 700;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	font-size: 30px;
+	padding-bottom: 6px;
+	letter-spacing: 0;
+	border-bottom: 1px solid #e2e2e2;
+}
+
+.pre-code-div {
+	margin-top: 20px;
+	margin-bottom: 50px;
+	color: rgb(255, 255, 255);
+	background: rgb(40, 44, 52);
+	border-radius: 5px;
+}
+
+.pre-code-div pre {
+	display: flex;
+	color: white;
+}
+
+/*.content-section {*/
+/*	padding-bottom: 60px;*/
+/*}*/
+
+.title {
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+.logo-box img{
+	height: 35px;
+}
+#introduction{
+	padding-top: 125px;
+}
+.bg-gray{
+	background-color: #f7f7f754;
+}
+pre code {
+	display: flex;
+	align-items: center;
+	padding: 30px 40px;
+}
+@media(max-width:991px) {
+	/*.content-section {*/
+	/*	padding: 85px 0 15px 0;*/
+	/*}*/
+}
+
+/* #structure
+================================================== */
+
+/* ————————————————————–
+  Tree core styles
+*/
+
+.tree {
+	margin: 1em;
+}
+
+.tree input {
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+}
+
+.tree input~ul {
+	display: none;
+}
+
+.tree input:checked~ul {
+	display: block;
+	list-style-type: none;
+}
+
+.l-24:after {
+	left: -24px !important;
+}
+
+/* ————————————————————–
+  Tree rows
+*/
+
+.tree li {
+	line-height: 1.2;
+	position: relative;
+	padding: 0 0 1em 1em;
+}
+
+.tree ul li {
+	padding: 1em 0 0 1em;
+}
+
+.tree>li:last-child {
+	padding-bottom: 0;
+}
+
+/* ————————————————————–
+  Tree labels
+*/
+
+.tree_label {
+	position: relative;
+	display: inline-block;
+	background: #fff;
+}
+
+label.tree_label {
+	cursor: pointer;
+}
+
+label.tree_label:hover {
+	color: #666;
+}
+
+/* ————————————————————–
+  Tree expanded icon
+*/
+
+label.tree_label:before {
+	background: #000;
+	color: #fff;
+	position: relative;
+	z-index: 1;
+	float: left;
+	margin: 0 1em 0 -2em;
+	width: 1em;
+	height: 1em;
+	border-radius: 1em;
+	content: '+';
+	text-align: center;
+	line-height: .9em;
+}
+
+:checked~label.tree_label:before {
+	content: '–';
+}
+
+/* ————————————————————–
+  Tree branches
+*/
+
+.tree li:before {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -.5em;
+	display: block;
+	width: 0;
+	border-left: 1px solid #777;
+	content: "";
+}
+
+.tree_label:after {
+	position: absolute;
+	top: 0;
+	left: -23px;
+	display: block;
+	height: 0.5em;
+	width: 1em;
+	border-bottom: 1px solid #777;
+	border-left: 1px solid #777;
+	border-radius: 0 0 0 .3em;
+	content: '';
+}
+
+label.tree_label:after {
+	border-bottom: 0;
+}
+
+:checked~label.tree_label:after {
+	border-radius: 0 .3em 0 0;
+	border-top: 1px solid #777;
+	border-right: 1px solid #777;
+	border-bottom: 0;
+	border-left: 0;
+	bottom: 0;
+	top: 0.5em;
+	height: auto;
+}
+
+.tree li:last-child:before {
+	height: 1em;
+	bottom: auto;
+}
+
+.tree>li:last-child:before {
+	display: none;
+}
+
+.tree_custom {
+	display: block;
+	background: #eee;
+	padding: 1em;
+	border-radius: 0.3em;
+}
+
+/* #Media
+================================================== */
+
+@media (max-width: 767px) {
+	.dropdown-toggle::after {
+		position: absolute;
+		display: block;
+		top: 10px;
+		left: -23px;
+		width: 1px;
+		height: 11px;
+		content: "";
+		border: none;
+		background-color: #000;
+		vertical-align: 0;
+		transition: all 200ms linear;
+	}
+	.dropdown-toggle[aria-expanded="true"]::after {
+		transform: rotate(90deg);
+		opacity: 0;
+	}
+	.dropdown-menu {
+		padding: 0 !important;
+		background-color: transparent;
+		box-shadow: none;
+		transition: all 200ms linear;
+	}
+	.dropdown-toggle[aria-expanded="true"]+.dropdown-menu {
+		margin-top: 10px !important;
+		margin-bottom: 20px !important;
+	}
+}
+
+/* #Link to page
+================================================== */
+
+.link-to-portfolio {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	z-index: 200;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	border-radius: 3px;
+	background-position: center center;
+	background-size: cover;
+	background-image: url('https://ivang-design.com/ig-logo.jpg');
+	box-shadow: 0 0 0 2px rgba(12, 12, 12, .1);
+	transition: opacity .2s, border-radius .2s, box-shadow .2s;
+	transition-timing-function: ease-out;
+}
+
+.link-to-portfolio:hover {
+	opacity: 0.8;
+	border-radius: 50%;
+	box-shadow: 0 0 0 20px rgba(12, 12, 12, .1);
+}
+
+/* #thank you
+================================================== */
+
+.thanks.title {
+	margin: 0;
+	text-align: center;
+}
+
+.thanks.title h4 {
+	color: #000;
+	font-size: 40px;
+	font-weight: 700;
+}

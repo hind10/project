@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags
+    ================================================== -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,
+            shrink-to-fit=no">
+
+        <!-- Favicon icon
+    ================================================== -->
+        <link rel="shortcut icon" href="assets/images/favicon.png"
+            type="image/x-icon">
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+        <!-- Bootstrap CSS
+    ================================================== -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+        <!-- Fonts CSS
+   ================================================== -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap"
+            rel="stylesheet">
+
+        <!-- Style CSS
+   ================================================== -->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <title>BusLine React Documentation</title>
+    </head>
+
+    <body>
+        <header id="header" class="start-header start-style">
+            <nav class="navbar navbar-wrapper navbar-expand-lg">
+                <div class="container">
+                    <div class="logo-menu-wrapper">
+                        <div class="logo-box">
+                            <a class="logo-wrapper" href="#">
+                                <img src="assets/images/logo-2.png"
+                                    alt="" title="" />
+                            </a>
+                        </div>
+
+                        <button class="navbar-toggler navbartoggler-icon"
+                            type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle
+                            navigation">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse navbar-link-wrapper"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav" id="menu-navbar"
+                            data-offset="10">
+                            <li class="nav-item-box"><a href="#introduction"
+                                    class="active">introduction</a></li>
+                            <li class="nav-item-box"><a href="#development">development</a></li>
+                            <li class="nav-item-box"><a href="#structure">structure</a></li>
+                            <li class="nav-item-box"><a href="#libraries">libraries</a></li>
+                            <li class="nav-item-box"><a href="#coding">code</a></li>
+                            <li class="nav-item-box"><a href="#layout">layout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section class="content-section">
+            <div class="container">
+                <div class="introduction title" id="introduction">
+                    <h2>Introduction</h2>
+
+                    <h3>Welcome!</h3>
+                    <p class="mb-4">Thank you for your interest in BusLine
+                        React Business Theme.</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="pb-1">
+                            <span class="list-title list-inline-item"><b>Item
+                                    Name :</b></span>
+                            <span> BusLine – React Business Landing
+                                Page </span>
+                        </li>
+
+                        <li class="pb-1">
+                            <span class="list-title list-inline-item"><b>Author
+                                    :</b></span>
+                            <span> Rangzol</span>
+                        </li>
+
+                        <li class="pb-1">
+                            <span class="list-title list-inline-item"><b>Version
+                                    :</b></span>
+                            <span> 1.0.0</span>
+                        </li>
+                        <li class="">
+                            <span class="list-title list-inline-item"><b>Demo :</b></span>
+                            <span> <a href="https://BusLine.netlify.com/">https://BusLine.netlify.com/</a></span>
+                        </li>
+                    </ul>
+                    <p class="mb-4">This documentation is to help you regarding
+                        each step of customization and get you started. Please
+                        go
+                        through the documentation carefully to understand how
+                        this template is made and how to edit this
+                        properly. HTML, CSS, Javascript and React knowledge is
+                        required to customize this template. </p>
+                    <p class="mb-4">If you require any assistance you may reach
+                        us from <a href="">comments section of the theme</a> or
+                        write to us from <a href="#">contact form at our profile
+                            page.</a> </p>
+
+                </div>
+            </div>
+        </section>
+        <section class="content-section bg-gray">
+            <div class="container">
+                <div class="Development title" id="development">
+                    <h2>Development</h2>
+
+                    <h3>Environment</h3>
+                    <p class="mb-4">BusLine packages require a package manager
+                        to be installed. You may use <a>npm</a> to
+                        serve this purpose. A side note about node version:
+                        Please use LTS version(not Current) since some
+                        of the plugins does not work with it yet.
+                        NPM Installation: <a
+                            href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>
+                    </p>
+
+                    <h3>Creating a Next.js project</h3>
+                    <p>Create a new folder for your project and initialize it as
+                        an npm or yarn project with the following command. </p>
+                    <div class="pre-code-div">
+                        <pre class="">
+                            <code><span class="">npm init -y  
+    or
+yarn init -y
+</span>
+                            </code>
+                        </pre>
+                    </div>
+
+                    <p>Once this is done, you can install Next.js as well as
+                        dependencies, react and react-dom</p>
+
+                    <div class="pre-code-div">
+                        <pre class="">
+                            <code>
+                                <span class="">npm i --save react react-dom next
+    or
+yarn add --save react react-dom next
+                                </span>
+                            </code>
+                        </pre>
+                    </div>
+
+                    <p>update your package.json to add the following start
+                        scripts:
+                    </p>
+
+                    <div class="pre-code-div">
+                        <pre class="">
+                            <code>
+                                <span class="">
+"scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+},</span>
+                            </code>
+                        </pre>
+                    </div>
+
+                    <h3>Installing Packages</h3>
+                    <p>Please navigate to project directory with command line
+                        and use one of the commands below. </p>
+
+                    <div class="pre-code-div">
+                        <pre class="">
+                        <code>
+                            <span class="">npm i
+  or
+yarn
+                            </span>
+                        </code>
+                    </pre>
+                    </div>
+
+                    <h3>Starting Project</h3>
+                    <p>Runs the app in development mode. Open
+                        http://localhost:3000 to view it in the browser.
+                        The page will automatically reload if you make changes
+                        to the code. You will see the build errors
+                        and lint warnings in the console.
+                    </p>
+
+                    <div class="pre-code-div">
+                        <pre class="">
+                        <code>
+                            <span class="">npm run dev
+    or
+yarn run dev
+                            </span>
+                        </code>
+                    </pre>
+                    </div>
+
+                    <h3>Creating a Production Build</h3>
+                    <p>When you’re ready to deploy to production, running npm
+                        run build will create an optimized build of
+                        your app in the build folder.</p>
+                    <p>Your app is ready to be deployed.</p>
+
+                    <div class="pre-code-div">
+                        <pre class="">
+                        <code>
+                            <span class="">npm run build
+    or
+yarn run build
+                            </span>
+                        </code>
+                    </pre>
+                    </div>
+
+                    <h3>Deployment</h3>
+                    <p><b>npm run build </b> or <b>yarn run build</b> creates a
+                        <b>build</b>
+                        directory
+                        with a production build of your app.
+                    </p>
+                    <p>
+                        Set up your favorite HTTP server so that a visitor to
+                        your site is served <b>index.html</b> and requests to
+                        static paths like
+                        <pre><b>/static/js/main.>&lt;hash&gt;.js</b></pre> are
+                        served with the contents of the <pre><b>
+/static/js/main.&lt;hash&gt;.js</b></pre>
+                        file.
+                    </p>
+                    <p> For more information about different server
+                        configurations please see <b>cra deployment guilde.</b></p>
+                    <h4>Now Deployment</h4>
+                    <p><b>Step-1:</b> Install the Now CLI</p>
+                    <p><b>Step-2</b>Install Now
+                        Desktop(https://zeit.co/download) or Now
+                        CLI(https://zeit.co/download#now-cli)</p>
+
+                    <div class="pre-code-div">
+                        <pre class="">
+                        <code>
+                            <span class="">npm i -g now</span>
+                        </code>
+                    </pre>
+                    </div>
+                    <p><b>Step-3</b> Deploy your project</p>
+                    <p>Finally then deploy your app with a single command in
+                        your terminal</p>
+                    <div class="pre-code-div">
+                        <pre class="">
+                    <code>
+                        <span class="">now</span>
+                    </code>
+                </pre>
+                    </div>
+                    <p>You may have to confirm your email address for first
+                        time. Please provide your email address in your command
+                        line and a confirmation email will be sent in your email
+                        address. Verify the email address and then run ‘now’
+                        command again</p>
+
+                    <h4>Netlify Deployment</h4>
+                    <p><b>Step-1:</b> At first open an account on netlify and go
+                        to web site <a href="https://www.netlify.com/">https://www.netlify.com/</a>.</p>
+                    <p>If you want to host the react js project following <a
+                            href="https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/">steps</a>.</p>
+                    <p><b>Step-3</b> You will build folder there drag and drop
+                        this ‘out’ folder on netlify ‘sites’ tab.</p>
+                    <p>Finally then deploy your app </p>
+
+                </div>
+            </div>
+        </section>
+        <section class="content-section">
+            <div class="container">
+                <div class="Structure title" id="structure">
+                    <h2>Structure</h2>
+                    <ul class="tree">
+                        <li>
+                            <input type="checkbox" checked="checked" id="c1" />
+                            <label class="tree_label mb-0" for="c1">BusLine-React</label>
+                            <ul class="pl-0">
+                                <li>
+                                    <span class="tree_label l-24">yarn.lock</span>
+                                </li>
+
+                                <li>
+                                    <span class="tree_label l-24">package.json</span>
+                                </li>
+
+                                <li>
+                                    <span class="tree_label l-24">next.config.js</span>
+                                </li>
+
+                                <li>
+                                    <span class="tree_label l-24">firebaseConfig.js</span>
+                                </li>
+
+                                <li>
+                                    <span class="tree_label l-24">.gitignore</span>
+                                </li>
+
+                                <li>
+                                    <span class="tree_label l-24">.babelrc</span>
+                                </li>
+
+                                <li>
+                                    <input type="checkbox" checked="checked"
+                                        id="c2" />
+                                    <label for="c2" class="tree_label mb-0">public</label>
+                                    <ul class="pl-0">
+                                        <li>
+                                            <input type="checkbox"
+                                                checked="checked" id="c3" />
+                                            <label for="c3" class="tree_label
+                                                mb-0">assets</label>
+                                            <ul class="pl-0">
+                                                <li><span class="tree_label
+                                                        l-24">images</span></li>
+                                                <li><span class="tree_label
+                                                        l-24">scss</span></li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="tree_label l-24">favicon.ico</span></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <input type="checkbox" checked="checked"
+                                        id="c5" />
+                                    <label for="c5" class="tree_label mb-0">pages</label>
+                                    <ul class="pl-0">
+                                        <li><span class="tree_label
+                                                l-24">index.js</span></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <span class="tree_label l-24">node_modules</span>
+                                </li>
+
+                                <li>
+                                    <span class="tree_label l-24">data</span>
+                                </li>
+
+                                <li>
+                                    <span class="tree_label l-24">containers</span>
+                                </li>
+
+                                <li>
+                                    <input type="checkbox" checked="checked"
+                                        id="c4" />
+                                    <label for="c4" class="tree_label mb-0">components</label>
+                                    <ul class="pl-0">
+                                        <li><span class="tree_label l-24">common</span></li>
+                                        <li><span class="tree_label l-24">businesstheme.js</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="content-section bg-gray">
+            <div class="container">
+                <div class="Libraries title" id="libraries">
+                    <h2>Libraries</h2>
+
+                    <h3>Next</h3>
+                    <p class="mb-4">Next js is a JavaScript framework created by
+                        Zeit. It lets you build server-side rendering and static
+                        web applications using
+                        React
+                        <a href="https://nextjs.org/docs">next js</a>.
+                    </p>
+
+                    <h3>react</h3>
+                    <p class="mb-4">A JavaScript library for building user
+                        interfaces:
+                        <a href="https://reactjs.org">react</a>.
+                    </p>
+
+                    <h3>react-feather</h3>
+                    <p class="mb-4">react-feather is a collection of simply
+                        beautiful open source icons for React.js. Each icon is
+                        designed on a 24x24 grid with an emphasis on simplicity,
+                        consistency and readability.
+                        <a href="https://github.com/feathericons/react-feather">react-feather</a>.
+                    </p>
+
+                    <h3>reactstrap</h3>
+                    <p class="mb-4">Easy to use React Bootstrap 4 components
+                        <a href="https://reactstrap.github.io">reactstrap</a>.
+                    </p>
+
+                    <h3>react-slick</h3>
+                    <p class="mb-4">React slick is a carousel component built
+                        with React. It is a react port of slick carousel
+                        <a
+                            href="https://www.npmjs.com/package/react-slick">
+                            react-slic</a>.
+                    </p>
+
+                    <h3>react-anchor-link-smooth-scroll</h3>
+                    <p class="mb-4">scroll different sections in home page
+                        based
+                        <a
+                            href="https://www.npmjs.com/package/react-anchor-link-smooth-scroll">
+                            react-anchor-link-smooth-scroll</a>.
+                    </p>
+
+                    <h3>react-countup</h3>
+                    <p class="mb-4">This will start a count up numbers
+                        transition.
+                        <a
+                            href="https://www.npmjs.com/package/react-countup">
+                            react-countup</a>.
+                    </p>
+
+                    <h3>react-loader-spinner</h3>
+                    <p class="mb-4">spinner component which can be implemented
+                        for async wait operation before data load to the view.
+                        <a
+                            href="https://www.npmjs.com/package/react-loader-spinner">
+                            react-loader-spinner</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="content-section">
+            <div class="container">
+                <div class="Styling title" id="styling">
+                    <h2>Styling</h2>
+                    <p>The theme uses <b> CSS </b> for creating stylesheets.</p>
+                    <p>Main style file is <code>public/assets/scss/style.scss.</code>.</p>
+                </div>
+            </div>
+        </section>
+        <section class="content-section bg-gray">
+            <div class="container">
+                <div class="coding title" id="coding">
+                    <h2>Code</h2>
+
+                    <h3>next.config.js</h3>
+                    <div class="pre-code-div">
+                        <pre class="">
+                    <code>
+                        <span class="">
+module.exports = withPlugins([
+    [withSass(
+        withCSS({
+            webpack(config, options) {
+                config.module.rules.push({
+                    test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+                    use: {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 1000000,
+                            name: '[name].[ext]'
+                        }
+                    },
+                })
+            return config;
+            }
+        })
+    )],
+]);
+                        </span>
+                    </code>
+                </pre>
+                    </div>
+                    <h3>.babelrc</h3>
+                    <div class="pre-code-div">
+                        <pre class="">
+                            <code>
+                                <span class="">
+"presets": [
+    "next/babel"
+],
+"plugins": [
+    [
+        "styled-components",
+        {
+            "ssr": true,
+            "displayName": true,
+            "preprocess": false
+        }
+    ]
+]
+                                </span>
+                            </code>
+                        </pre>
+                    </div>
+
+                    <h3>firebaseConfig.js</h3>
+                    <div class="pre-code-div">
+                        <pre class="">
+                            <code>
+                                <span class="">
+apiKey: "your api key",
+authDomain: "your auth domain",
+databaseURL: "your database URL",
+projectId: "your projectId",
+storageBucket: "your storageBucket",
+messagingSenderId: "your messagingSenderId",
+appId: "your appId",
+measurementId: "your measurementId"
+                                </span>
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-section">
+            <div class="container">
+                <div class="Layout title" id="layout">
+                    <h2>Layout</h2>
+                    <h3>/layout</h3>
+                    <p>There are one different main layout for
+                        src/pages/index.js and these are located at src/index.js
+                        file.
+                    </p>
+                    <h3>/containers</h3>
+                    <p>These folder contains smart components that may contain
+                        logic, view and other components. They are
+                        divided into logical sub folders providing a hint about
+                        their usage place. You may also create new
+                        ones or modify existing containers for your project
+                        needs.
+                    </p>
+                    <h3>/components</h3>
+                    <p>These folder contains dumb components which are mostly
+                        made to provide view. They receive their data
+                        from outside of themselves and used throughout the
+                        project and in containers. These are also divided
+                        into sub folders.
+                    </p>
+                    <h3>/data</h3>
+                    <p>In the data folder, you will find the specific data that
+                        are used on that specific section
+                    </p>
+                    <h3>/pages</h3>
+                    <p>Here are the pages (also known as views) of the
+                        application, each file will automatically match a route
+                        as described in <a
+                            href="https://nextjs.org/docs#dynamic-routing">
+                            Next.js documentation.</a>
+                    </p>
+                    <p>The _document.js is a special file which will only be
+                        used Server Side to render the basic HTML of the
+                        application.</p>
+                </div>
+            </div>
+        </section>
+        <section class="content-section bg-gray">
+            <div class="container">
+                <div class="thanks title">
+                    <h4>Thank you</h4>
+                    <p>Once again thank you for purchasing one of our Templates
+                        if you like our Templates please rate us.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS
+================================================== -->
+        <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/header.js"></script>
+    </body>
+
+</html>
